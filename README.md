@@ -1,6 +1,6 @@
 # Iterated File-Sharing Dilemma
 
-This is the CS 269i class project developed by the former CS269i student, Cary Huang (We really appreciate for Cary's wonderful work).
+This coding tournament is based on a CS 269i class project is developed by the former CS269i student, Cary Huang (We really appreciate for Cary's wonderful work).
 
 
 
