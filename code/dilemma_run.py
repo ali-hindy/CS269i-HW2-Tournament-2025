@@ -3,6 +3,8 @@ import itertools
 import importlib
 import numpy as np
 import random
+import sys
+
 
 RESULTS_FILE = "results.txt"
 STRATEGY_FOLDER = "exampleStrats"
@@ -28,6 +30,13 @@ def getVisibleHistory(history, player, turn):
         historySoFar = np.flip(historySoFar,0)
     return historySoFar
 
+def load_clean_strategy(module_name):
+    if module_name in sys.modules:
+        importlib.reload(sys.modules[module_name])
+    else:
+        importlib.import_module(module_name)
+    return sys.modules[module_name]
+
 def strategyMove(move):
     if type(move) is str:
         defects = ["defect","tell truth", 'D']
@@ -50,8 +59,8 @@ def outputRoundResults(f, pair, roundHistory, scoresA, scoresB):
 
 def runRound(pair, scoreKeeper, coopKeeper, roundKeeper):
     # print("modulea:",STRATEGY_FOLDER+"."+pair[0])
-    moduleA = importlib.import_module(STRATEGY_FOLDER+"."+pair[0])
-    moduleB = importlib.import_module(STRATEGY_FOLDER+"."+pair[1])
+    moduleA = load_clean_strategy(STRATEGY_FOLDER+"."+pair[0])
+    moduleB = load_clean_strategy(STRATEGY_FOLDER+"."+pair[1])
     memoryA = None
     memoryB = None
     LENGTH_OF_GAME = 200
