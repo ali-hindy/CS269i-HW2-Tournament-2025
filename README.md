@@ -69,7 +69,8 @@ def strategy(history, avgHistoryScore, avgHistoryCoop, memory):
 
 ### Outputs:
 - `moveChoice`: Your move (0 = Defect, 1 = Cooperate)
-- `memory`: Any memory object you want to carry forward to the next round
+- `memory`: An object used to retain information between turns **within the current matchup**.  
+  Note: You should **not store information across different matchups**. Your strategy must rely only on the current matchup’s `history`, along with `avgHistoryScore` and `avgHistoryCoop`.
 
 
 ---
