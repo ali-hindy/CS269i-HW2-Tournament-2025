@@ -22,10 +22,10 @@ To **add your own strategy**, simply create a new `.py` file in `code/exampleStr
 
 ## Payout Chart
 
-|                        | **Player A cooperates** | **Player A defects** |
+|                        | **Player B cooperates** | **Player B defects** |
 |------------------------|-------------------------|----------------------|
-| **Player B cooperates** | A: +2, B: +2            | A: +3, B: -1         |
-| **Player B defects**    | A: -1, B: +3            | A:  0, B:  0         |
+| **Player A cooperates** | A: +2, B: +2            | A: -1, B: +3         |
+| **Player A defects**    | A: +3, B: -1            | A:  0, B:  0         |
 
 In this code:  
 `0 = 'D' = Defect`  
