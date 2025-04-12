@@ -14,7 +14,7 @@ Nicky Case's "The Evolution of Trust" is also super fascinating, but it's not ne
 
 When you run `code/dilemma_run.py`, it will automatically search for all Python strategy files in the `code/exampleStrats/` folder. Then, it simulates the **Iterated File-Sharing Dilemma** for every possible pair of strategies in a round-robin format — that is, it evaluates all $n \choose 2$ matchups.
 
-After all simulations complete, the script calculates each strategy's average performance and generates a **leaderboard**, saving the results to `results.txt`.
+After all simulations complete, the script calculates each strategy's average score and generates a **leaderboard**, saving the results to `results.txt`.
 
 To **add your own strategy**, simply create a new `.py` file in `code/exampleStrats/` following the same format as the example strategies. When you run `dilemma_run.py`, your strategy will be included in the tournament automatically.
 
