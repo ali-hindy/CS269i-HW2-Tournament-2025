@@ -45,7 +45,7 @@ def strategy(history, avgHistoryScore, avgHistoryCoop, memory):
     return moveChoice, memory
 ```
 
-- `history`: A 2×n NumPy array, where `n` is the number of turns so far.  
+- `history`: A 2×n NumPy array, where `n` is the number of turns in this matchup so far.  
   - `history[0]` contains **your moves**.
   - `history[1]` contains **your opponent’s moves**.
   
