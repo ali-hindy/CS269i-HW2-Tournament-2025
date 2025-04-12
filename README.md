@@ -20,7 +20,7 @@ To **add your own strategy**, simply create a new `.py` file in `code/exampleStr
 
 ---
 
-## Payout Chart
+## Payoff Chart
 
 |                        | **Player B cooperates** | **Player B defects** |
 |------------------------|-------------------------|----------------------|
