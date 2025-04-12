@@ -40,7 +40,7 @@ In this code:
 Each strategy must define a function with the following signature:
 
 ```python
-def strategy(history, avgHistoryScore, avgHistoryCoop, memory):
+def strategy(history, avgPreviousScore, avgPreviousCoop, memory):
     ...
     return moveChoice, memory
 ```
@@ -56,8 +56,8 @@ def strategy(history, avgHistoryScore, avgHistoryCoop, memory):
   ```
 
 
-- `avgHistoryScore`: A float representing your opponent’s **average score per turn** averaged across all turns in all of their *previous* matchups.
-- `avgHistoryCoop`: A float representing the **probability that your opponent cooperated**, averaged across all turns in all of their *previous* matchups
+- `avgPreviousScore`: A float representing your opponent’s **average score per turn** averaged across all turns in all of their *previous* matchups.
+- `avgPreviousCoop`: A float representing the **probability that your opponent cooperated**, averaged across all turns in all of their *previous* matchups
   - **Both values exclude the current matchup** (i.e., the one against your strategy).
   - If this is your opponent’s **first matchup**, both values will be set to `0.0`.
 
@@ -70,7 +70,7 @@ def strategy(history, avgHistoryScore, avgHistoryCoop, memory):
 ### Outputs:
 - `moveChoice`: Your move (0 = Defect, 1 = Cooperate)
 - `memory`: An object used to retain information between turns **within the current matchup**.  
-  Note: You should **not store information across different matchups**. Your strategy must rely only on the current matchup’s `history`, along with `avgHistoryScore` and `avgHistoryCoop`.
+  Note: You should **not store information across different matchups**. Your strategy must rely only on the current matchup’s `history`, along with `avgPreviousScore` and `avgPreviousCoop`.
 
 
 ---
